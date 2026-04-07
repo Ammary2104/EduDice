@@ -1,0 +1,185 @@
+/* SubjectSelection.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subject-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+}
+
+.subject-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.subject-logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: black;
+  margin: 0;
+}
+
+.subject-logout-button {
+  background: transparent;
+  border: 2px solid black;
+  color: black;
+  padding: 8px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.subject-logout-button:hover {
+  background: black;
+  color: white;
+}
+
+.subject-welcome {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: left;
+  width: 100%;
+}
+
+.subject-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+  color: black;
+  text-align: center;
+  width: 100%;
+}
+
+.subjects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 30px;
+}
+
+.subject-card {
+  width: 100%;
+  padding: 25px 20px;
+  background: transparent;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.subject-card:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+.subject-card.selected {
+  background: black;
+  border-color: black;
+  animation: selectPulse 0.3s ease;
+}
+
+.subject-card.selected .subject-name {
+  color: white;
+}
+
+.subject-card.hovered {
+  border-color: #333;
+}
+
+.subject-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  letter-spacing: 1px;
+}
+
+.subject-note {
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+  margin-top: 20px;
+}
+
+@keyframes selectPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 500px) {
+  .subject-logo {
+    font-size: 2rem;
+  }
+  
+  .subject-title {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .subject-name {
+    font-size: 1.2rem;
+  }
+  
+  .subject-card {
+    padding: 20px 15px;
+  }
+}
+
+/* Updated SubjectSelection.css */
+.subject-card {
+  width: 100%;
+  padding: 25px 20px;
+  background: transparent;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.subject-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  letter-spacing: 1px;
+}
+
+.subject-note {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
+.subject-instruction {
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+}

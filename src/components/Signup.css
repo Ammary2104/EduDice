@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-container {
+  width: 100%;
+  max-width: 500px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+}
+
+.logo {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: black;
+  text-align: center;
+}
+
+.signup-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: black;
+  text-align: left;
+  width: 100%;
+}
+
+.signup-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 2px solid black;
+  background: transparent;
+  font-size: 1.1rem;
+  outline: none;
+  color: black;
+}
+
+.input-field:focus {
+  border-bottom-color: black;
+}
+
+.input-field:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.login-link {
+  font-size: 1rem;
+  margin: 15px 0 10px;
+  cursor: pointer;
+  color: black;
+  text-align: left;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+.signup-button {
+  width: 100%;
+  padding: 15px;
+  background: #0066cc;
+  border: 2px solid black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  color: black;
+  text-align: center;
+}
+
+.signup-button:hover:not(:disabled) {
+  background: #f0f0f0;
+}
+
+.signup-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Add these styles to both Signup.css and Login.css */
+
+.password-input-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.password-field {
+  width: 100%;
+  padding-right: 40px; /* Make space for the toggle button */
+}
+
+.password-toggle {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.3rem;
+  user-select: none;
+  padding: 5px;
+  color: black;
+  background: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+}
+
+.password-toggle:hover {
+  opacity: 0.7;
+}
+
+.password-toggle:active {
+  opacity: 0.5;
+}
+
+/* Ensure the input field doesn't overlap with the toggle */
+.input-field.password-field {
+  padding-right: 45px;
+}

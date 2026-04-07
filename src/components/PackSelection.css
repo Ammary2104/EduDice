@@ -1,0 +1,257 @@
+/* PackSelection.css */
+
+.pack-selection-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.pack-selection-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.back-button {
+  background: transparent;
+  border: 2px solid black;
+  color: black;
+  padding: 8px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.back-button:hover {
+  background: black;
+  color: white;
+}
+
+.pack-selection-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  margin: 0;
+}
+
+.header-spacer {
+  width: 80px;
+}
+
+.pack-selection-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.pack-selection-subject {
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.packs-options {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.existing-packs-section {
+  border: 2px solid black;
+  padding: 20px;
+  background: transparent;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: black;
+  text-align: center;
+}
+
+.packs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.pack-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+.pack-item:hover {
+  background: #f0f0f0;
+  transform: translateX(5px);
+}
+
+.pack-item.selected {
+  background: black;
+  border-color: black;
+}
+
+.pack-item.selected .pack-name,
+.pack-item.selected .pack-questions-count,
+.pack-item.selected .pack-date {
+  color: white;
+}
+
+.pack-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.pack-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: black;
+}
+
+.pack-questions-count {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.pack-date {
+  font-size: 0.75rem;
+  color: #999;
+}
+
+.select-pack-button {
+  background: transparent;
+  border: 2px solid black;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: black;
+}
+
+.pack-item.selected .select-pack-button {
+  border-color: white;
+  color: white;
+}
+
+.select-pack-button:hover {
+  background: black;
+  color: white;
+}
+
+.pack-item.selected .select-pack-button:hover {
+  background: white;
+  color: black;
+}
+
+.divider {
+  text-align: center;
+  position: relative;
+  margin: 10px 0;
+}
+
+.divider span {
+  background: white;
+  padding: 0 15px;
+  color: #666;
+  font-weight: bold;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #ccc;
+  z-index: -1;
+}
+
+.create-new-section {
+  text-align: center;
+  padding: 20px;
+  border: 2px dashed black;
+}
+
+.create-new-pack-button {
+  background: transparent;
+  border: 2px solid black;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.create-new-pack-button:hover {
+  background: black;
+  color: white;
+}
+
+.create-new-note {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.no-packs-message {
+  text-align: center;
+  padding: 30px;
+  color: #999;
+  font-style: italic;
+}
+
+.no-packs-message p {
+  margin: 5px 0;
+}
+
+@media (max-width: 500px) {
+  .pack-selection-title {
+    font-size: 1.5rem;
+  }
+  
+  .pack-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .select-pack-button {
+    width: 100%;
+  }
+  
+  .pack-selection-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .header-spacer {
+    display: none;
+  }
+  
+  .back-button {
+    align-self: flex-start;
+  }
+}
